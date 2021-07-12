@@ -4,7 +4,7 @@ const app = express();
 var server = http.createServer(app);
 const keepAlive = require('./index.js');
 
-app.get('/api/chatbot', function(request, response){
+app.get('/chatbot', function(request, response){
   let user = request.query.user || "Pranav"  
   let name = request.query.name || "Moezilla"
   let teamname = request.query.teamname || "moezilla"
