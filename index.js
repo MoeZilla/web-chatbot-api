@@ -8,11 +8,11 @@ app.get('/chatbot', function(request, response){
   let user = request.query.user || "Pranav"  
   let name = request.query.name || "Moezilla"
   let gender = request.query.gender || "female"
-    fetch(`http://api.brainshop.ai/get?bid=178&key=sX5A2PcYZbsN5EY6&uid=${user}&msg=${encodeURIComponent(request.query.msg)}`)
+    fs(`http://api.brainshop.ai/get?bid=178&key=sX5A2PcYZbsN5EY6&uid=${user}&msg=${encodeURIComponent(request.query.msg)}`)
     .then(response => response.json())
     .then(data => {
         response.status(500).json({
-        msg: data.cnt.replace('MoeZilla', `${name} bot).replace('Acobot Team', 'hshs').replace('Female chatbot', `${gender} chatbot`)
+        msg: data.cnt.replace('MoeZilla', `${name} bot`).replace('Acobot Team', 'hshs').replace('Female chatbot', `${gender} chatbot`)
     });
     });
 });
