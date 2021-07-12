@@ -13,7 +13,7 @@ app.get('/chatbot', function(request, response){
     .then(response => response.json())
     .then(data => {
         response.status(500).json({
-        msg: data.cnt.replace('Aco', `${name} bot).replace('Acobot Team', `${teamname} Team).replace('Male chatbot', `${gender} chatbot`)
+        msg: data.cnt.replace('Aco', `${name} bot).replace('Acobot Team', `${teamname} Team`).replace('Male chatbot', `${gender} chatbot`)
     });
     });
 });
